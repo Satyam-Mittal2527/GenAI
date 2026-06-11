@@ -6,8 +6,8 @@ load_dotenv()
 #Tmeperature creates how much creative output the user neeeds
 #High temperature higher creativity
 #Ranges from 0.0 to 2.0
-
-
+#Temperature allows to change or make the output same for given same input
+#If Tem=0, for a given input everytime we send same input, every time same output will come and if increase then different outputs will come
 #max_completion_tokens = Limits the output token by max_completion_tokens as each token is paid
 
 openai_model = ChatOpenAI(
