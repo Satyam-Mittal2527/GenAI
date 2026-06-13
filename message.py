@@ -1,5 +1,8 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
+from dotenv import load_dotenv
 from langchain_huggingface import HuggingFacePipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+load_dotenv()
 
 model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
@@ -18,8 +21,12 @@ pipe = pipeline(
 
 llm = HuggingFacePipeline(pipeline=pipe)
 
-response = llm.invoke(
-    "Answer this question briefly.\nQuestion: What is the capital of Nepal?\nAnswer:"
-)
+messages = [
+    SystemMessage(content="You are a helpful assistance"),
+    HumanMessage(content="Tell me about a langchain")
+]
+result = llm.invoke(messages)
+messages.append(AIMessage(content = result))
 
-print(response)
+print(messages)
+
