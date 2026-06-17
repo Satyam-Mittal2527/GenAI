@@ -12,7 +12,6 @@ chat_history = []
 with open('chat_history.txt') as f:
     lines = f.readlines()
 
-# Example: alternate human and AI messages
 for i, line in enumerate(lines):
     if i % 2 == 0:
         chat_history.append(HumanMessage(content=line.strip()))
