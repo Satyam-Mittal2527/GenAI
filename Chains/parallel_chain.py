@@ -45,7 +45,7 @@ text = """
 
 Deep learning is a subset of machine learning 
 that uses multi-layered artificial neural networks 
-to solve complex problems. Inspired by the human brain, 
+to solve complex problems. Inspired by the human b rain, 
 it allows computers to learn directly from raw data—such as images, text, and sound—without 
 requiring humans to manually extract features
 """

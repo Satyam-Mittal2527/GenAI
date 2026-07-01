@@ -8,4 +8,4 @@ loader = DirectoryLoader(
 
 docs = loader.load()
 
-print(docs)
+print(d ocs)
